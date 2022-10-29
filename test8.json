@@ -5,10 +5,12 @@
       "type": 1,
       "title": "Jellyfin",
       "description": "Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media.",
-      "categories": ["docker"],
+      "categories": ["media"],
       "platform": "linux",
       "logo": "https://raw.githubusercontent.com/jellyfin/jellyfin-ux/master/branding/SVG/icon-solid-white.svg",
-      "image": "hotio/jellyfin:nightly",
+      "image": "jellyfin/jellyfin:unstable",
+      "hostname": "MyFlix",
+      "user": "1000:1000",
       "ports": [
           "8096:8096/tcp",
           "8920:8920/tcp",
@@ -26,31 +28,31 @@
         }
       ],
       "env": [
-				{
-					"name": "PUID",
-					"label": "PUID",
-					"default": "1000",
-					"description": "for UserID"
-				},
-				{
-					"name": "PGID",
-					"label": "PGID",
-					"default": "1000",
-					"description": "for GroupID"
-				},
-				{
-					"name": "TZ",
-					"label": "TZ",
-					"default": "America/New_York",
-					"description": "Specify a timezone to use for example America/New_York"
-				},
-				{
-					"name": "UMASK",
-					"label": "UMASK",
-					"default": "002",
-					"description": "Specify a umask for file/directory creation."
-				}
-			],
+	{
+	  "name": "PUID",
+	  "label": "PUID",
+	  "default": "1000",
+	  "description": "for UserID"
+	},
+	{
+	  "name": "PGID",
+	  "label": "PGID",
+	  "default": "1000",
+	  "description": "for GroupID"
+	},
+	{
+	  "name": "TZ",
+	  "label": "TZ",
+	  "default": "America/New_York",
+	  "description": "Specify a timezone to use for example America/New_York"
+	},
+	{
+	  "name": "UMASK",
+	  "label": "UMASK",
+	  "default": "002",
+	  "description": "Specify a umask for file/directory creation."
+	}
+      ],
       "restart_policy": "unless-stopped"
     }
   ]
