@@ -25,6 +25,32 @@
           "bind": "/mnt/media"
         }
       ],
+      "env": [
+				{
+					"name": "PUID",
+					"label": "PUID",
+					"default": "1000",
+					"description": "for UserID"
+				},
+				{
+					"name": "PGID",
+					"label": "PGID",
+					"default": "1000",
+					"description": "for GroupID"
+				},
+				{
+					"name": "TZ",
+					"label": "TZ",
+					"default": "America/New_York",
+					"description": "Specify a timezone to use for example America/New_York"
+				},
+				{
+					"name": "UMASK",
+					"label": "UMASK",
+					"default": "002",
+					"description": "Specify a umask for file/directory creation."
+				}
+			],
       "restart_policy": "unless-stopped"
     }
   ]
