@@ -19,8 +19,13 @@
         {
           "container": "/config",
           "bind": "/mnt/appdata/jellyfin"
+        },
+        {
+          "container": "/media",
+          "bind": "/mnt/media"
         }
-      ]
+      ],
+      "restart_policy": "unless-stopped"
     }
   ]
 }
