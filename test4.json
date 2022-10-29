@@ -1,0 +1,21 @@
+{
+  "version": "2",
+  "templates": [
+    {
+      "type": 1,
+      "title": "Jellyfin",
+      "description": "Jellyfin server.",
+      "categories": ["docker"],
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/jellyfin/jellyfin-ux/master/branding/SVG/icon-solid-white.svg",
+      "image": "hotio/jellyfin:nightly",
+      "ports": ["8096/tcp"],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/mnt/appdata/jellyfin"
+        }
+      ]
+    }
+  ]
+}
