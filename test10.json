@@ -20,7 +20,7 @@
       "volumes": [
         {
           "container": "/config",
-          "bind": "/mnt/appdata/jellyfin"
+          "bind": "/mnt/appdata/jellyfin/config"
         },
         {
           "container": "/cache",
