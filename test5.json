@@ -4,12 +4,17 @@
     {
       "type": 1,
       "title": "Jellyfin",
-      "description": "Jellyfin server.",
+      "description": "Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media.",
       "categories": ["docker"],
       "platform": "linux",
       "logo": "https://raw.githubusercontent.com/jellyfin/jellyfin-ux/master/branding/SVG/icon-solid-white.svg",
       "image": "hotio/jellyfin:nightly",
-      "ports": ["8096/tcp"],
+      "ports": [
+          "8096:8096/tcp",
+          "8920:8920/tcp",
+          "7359:7359/udp",
+          "1900:1900/udp"
+      ],
       "volumes": [
         {
           "container": "/config",
