@@ -23,6 +23,10 @@
           "bind": "/mnt/appdata/jellyfin"
         },
         {
+          "container": "/cache",
+          "bind": "/mnt/appdata/jellyfin/cache"
+        },
+        {
           "container": "/media",
           "bind": "/mnt/media"
         }
